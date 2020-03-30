@@ -52,7 +52,7 @@
  * Options: BLACK, BLUE, BROWN, BRRED, CYAN, GBLUE, GRAY, GREEN, MAGENTA, RED, WHITE, YELLOW
  */
 #define ST7920_BKCOLOR BLACK
-#define ST7920_FNCOLOR YELLOW
+#define ST7920_FNCOLOR WHITE
 
 /**
  *  Text displayed at the top of the TFT in Marlin Mode.
@@ -64,7 +64,7 @@
  *
  *  *** NOT RECOMMENDED FOR TFT24 ***
  */
-//#define ST7920_FULLSCREEN
+#define ST7920_FULLSCREEN
 
 /**
  * Clean Mode Switching Support
@@ -75,7 +75,7 @@
  *
  * *** ONLY SUPPORTED ON TFT24 V1.1, TFT35 V3.0, AND TFT28 V3.0 ***
  */
-//#define CLEAN_MODE_SWITCHING_SUPPORT  // Enable CLEAN MODE SWITCHING SUPPORT
+#define CLEAN_MODE_SWITCHING_SUPPORT  // Enable CLEAN MODE SWITCHING SUPPORT
 
 //===========================================================================
 //========================== Touch Mode Settings ============================
@@ -90,7 +90,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 115200
+#define BAUDRATE 250000
 
 /**
  * Default Touch Mode Language
@@ -132,10 +132,10 @@
 #define FAN_NUM      1    // set in 1~6
 
 //                       PLA      PETG       ABS
-#define PREHEAT_BED      {60,      70,       100}
-#define PREHEAT_HOTEND   {200,     250,      230}
+#define PREHEAT_BED      {50,      70,       100}
+#define PREHEAT_HOTEND   {215,     250,      230}
 
-#define HEAT_MAX_TEMP    {150,    275,       275,       275,       275,       275,       275}    //max temperature can be set
+#define HEAT_MAX_TEMP    {150,    295,       275,       275,       275,       275,       275}    //max temperature can be set
 #define HEAT_SIGN_ID     {"B:",   "T0:",     "T1:",     "T2:",     "T3:",     "T4:",     "T5:"}
 #define HEAT_DISPLAY_ID  {"Bed",  "T0",      "T1",      "T2",      "T3",      "T4",      "T5"}
 #define HEAT_CMD         {"M140", "M104 T0", "M104 T1", "M104 T2", "M104 T3", "M104 T4", "M104 T5" };
@@ -313,7 +313,7 @@
  * Enable Start & End G-code in SETTINGS -> FEATURE menu.
  */
 // Start G-code - run this G-code before starting print
-#define PRINT_START_GCODE "G28\nG29\nG1 Z20\n" // Home all, run ABL routine, raise Z 20 mm
+#define PRINT_START_GCODE "G28\nG1 Z20\n" // Home all, run ABL routine, raise Z 20 mm
 
 // End G-code - run this G-code after finishing print
 #define PRINT_END_GCODE "G90\nG1 E-4\nG92 E0\nM18\n" // Switch to absolute positioning, reduce filament pressure by performing small retract, reset extruder position, disable steppers
