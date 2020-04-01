@@ -75,11 +75,7 @@
  *  Options:  0: Disabled. RECOMMENDED FOR TFT24
  *            1: Enabled Marlin Fullscreen mode.
  */
-<<<<<<< HEAD
 #define ST7920_FULLSCREEN
-=======
-#define DEFAULT_ST7920_FULLSCREEN_MODE 0 // 0: Disabled. RECOMMENDED FOR TFT24
->>>>>>> upstream/master
 
 /**
  * Clean Mode Switching Support
